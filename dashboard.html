@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>COVID-19 Research Dashboard</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            padding: 20px;
+            color: #333;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 20px;
+            padding: 30px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+        }
+        
+        h1 {
+            color: #667eea;
+            text-align: center;
+            margin-bottom: 10px;
+            font-size: 2.5em;
+        }
+        
+        .subtitle {
+            text-align: center;
+            color: #666;
+            margin-bottom: 30px;
+            font-size: 1.2em;
+        }
+        
+        .stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            margin-bottom: 40px;
+        }
+        
+        .stat-card {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 25px;
+            border-radius: 15px;
+            text-align: center;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+        
+        .stat-number {
+            font-size: 2.5em;
+            font-weight: bold;
+            margin: 10px 0;
+        }
+        
+        .stat-label {
+            font-size: 1em;
+            opacity: 0.9;
+        }
+        
+        .section {
+            margin: 40px 0;
+        }
+        
+        h2 {
+            color: #667eea;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 3px solid #667eea;
+        }
+        
+        .chart-container {
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 10px;
+            margin: 20px 0;
+        }
+        
+        .chart-container img {
+            width: 100%;
+            max-width: 800px;
+            height: auto;
+            display: block;
+            margin: 0 auto;
+            border-radius: 10px;
+        }
+        
+        .findings {
+            background: #f0f7ff;
+            padding: 25px;
+            border-radius: 15px;
+            border-left: 5px solid #667eea;
+        }
+        
+        .findings ul {
+            list-style-position: inside;
+            line-height: 2;
+        }
+        
+        .findings li {
+            margin: 10px 0;
+            font-size: 1.1em;
+        }
+        
+        footer {
+            text-align: center;
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 2px solid #eee;
+            color: #666;
+        }
+        
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 1.8em;
+            }
+            
+            .stat-number {
+                font-size: 2em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>📊 COVID-19 Research Analysis</h1>
+        <p class="subtitle">Analysis of CORD-19 Research Dataset</p>
+        
+        <div class="stats">
+            <div class="stat-card">
+                <div class="stat-label">Total Papers</div>
+                <div class="stat-number">1,000</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-label">Unique Journals</div>
+                <div class="stat-number">15</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-label">Date Range</div>
+                <div class="stat-number">2019-2023</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-label">Data Sources</div>
+                <div class="stat-number">9</div>
+            </div>
+        </div>
+        
+        <div class="section">
+            <h2>📈 Key Findings</h2>
+            <div class="findings">
+                <ul>
+                    <li><strong>Peak Publication Year:</strong> 2020-2021 saw the highest number of COVID-19 research papers (260+ each year)</li>
+                    <li><strong>Top Journal:</strong> Emerging Infectious Diseases led with the most publications</li>
+                    <li><strong>Most Common Terms:</strong> "comprehensive", "review", "context", "study", and "analysis"</li>
+                    <li><strong>Source Distribution:</strong> Research papers were fairly distributed across bioRxiv (12.2%), Springer (12.1%), and other major sources</li>
+                    <li><strong>Research Decline:</strong> Publications decreased in 2022-2023 as the pandemic progressed</li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="section">
+            <h2>📊 Publications Over Time</h2>
+            <div class="chart-container">
+                <img src="chart_timeline.png" alt="Publications Timeline">
+            </div>
+            <p style="text-align: center; margin-top: 10px; color: #666;">
+                Research output peaked during 2020-2021 at the height of the pandemic
+            </p>
+        </div>
+        
+        <div class="section">
+            <h2>📰 Top Publishing Journals</h2>
+            <div class="chart-container">
+                <img src="chart_journals.png" alt="Top Journals">
+            </div>
+            <p style="text-align: center; margin-top: 10px; color: #666;">
+                Leading medical and virology journals dominated COVID-19 research publication
+            </p>
+        </div>
+        
+        <div class="section">
+            <h2>🔤 Most Frequent Words in Titles</h2>
+            <div class="chart-container">
+                <img src="chart_words.png" alt="Word Frequency">
+            </div>
+            <p style="text-align: center; margin-top: 10px; color: #666;">
+                Key research themes focused on comprehensive reviews and contextual analysis
+            </p>
+        </div>
+        
+        <div class="section">
+            <h2>📊 Distribution by Source</h2>
+            <div class="chart-container">
+                <img src="chart_sources.png" alt="Source Distribution"><img src="chart_sources.png" alt="Source Distribution">
+            </div>
+            <p style="text-align: center; margin-top: 10px; color: #666;">
+                Research was distributed across multiple reputable sources and preprint servers
+            </p>
+        </div>
+        
+        <footer>
+            <p><strong>COVID-19 Research Analysis Dashboard</strong></p>
+            <p>Data Source: CORD-19 Dataset | Analysis Period: 2019-2023</p>
+            <p>Python Frameworks Assignment | Created with pandas, matplotlib, and seaborn</p>
+        </footer>
+    </div>
+</body>
+</html>

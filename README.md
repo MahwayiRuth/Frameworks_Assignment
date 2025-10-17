@@ -1,13 +1,14 @@
-# COVID-19 Research Analysis - CORD-19 Dataset
+COVID-19 Research Analysis - CORD-19 Dataset
 
-## Project Overview
+📘 Project Overview
 
 This project analyzes the CORD-19 (COVID-19 Open Research Dataset) to extract insights about research publications during the pandemic. The analysis includes data cleaning, exploratory data analysis, visualizations, and an interactive web dashboard.
 
-**Assignment:** Python Frameworks Assignment  
-**Dataset:** CORD-19 metadata.csv (sample of 1,000 research papers)  
-**Time Period:** 2019-2023  
-**Tools Used:** Python, pandas, matplotlib, seaborn, HTML/CSS
+Assignment: Python Frameworks Assignment
+Dataset: CORD-19 metadata.csv (sample of 1,000 research papers)
+Time Period: 2019–2023
+Tools Used: Python, pandas, matplotlib, seaborn, HTML/CSS
+
 
 ---
 Python final project/
